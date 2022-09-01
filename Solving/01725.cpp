@@ -23,7 +23,7 @@ long long mul(int n, int s, int e, int l, int r) {
 }
 
 long long update(int n, int s, int e, int i) {
-  if(i < s || i > e) return 1;
+  if(i < s || i > e) return T[n];
   if(s == e) {
     if(i == s) {
       T[n] = A[i];
@@ -53,10 +53,6 @@ int main() {
     cin >> a >> b >> c;
     if(a == 1) {
       A[b-1] = c;
-      for(int i = 0; i < N; i++) {
-        cout << A[i] << " ";
-      }
-      cout << "\n";
       update(1, 0, N-1, b-1);
     } else if(a == 2) {
       cout << mul(1, 0, N-1, b-1, c-1) << "\n";
