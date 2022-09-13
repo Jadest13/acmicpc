@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int N, M;
+string N, M;
 
 int main() {
   
@@ -12,7 +12,6 @@ int main() {
   cout.tie(0);
 
   cin >> N >> M;
-  cout << N/M << " " << N%M;
 
   return 0;
 }
